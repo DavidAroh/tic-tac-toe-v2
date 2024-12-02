@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 import '../styles/Game.css';
 
-const socket = io('http://localhost:4000'); // Adjust the URL if needed
+const socket = io('https://tic-tac-toe-v2-zeta.vercel.app/'); // Adjust the URL if needed
 
 function Game({ roomId, playerSymbol }) {
   const [board, setBoard] = useState(Array(9).fill(null));

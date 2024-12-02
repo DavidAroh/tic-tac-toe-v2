@@ -1,6 +1,6 @@
 const io = require('socket.io')(4000, {
   cors: {
-    origin: '*',
+    origin: 'https://tic-tac-toe-v2-zeta.vercel.app',
   },
 });
 
