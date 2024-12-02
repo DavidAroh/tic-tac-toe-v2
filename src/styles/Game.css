@@ -1,0 +1,94 @@
+/* Game.css */
+
+/* Center the game board and set font styles */
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Room and turn information */
+h2, h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* The Tic-Tac-Toe board container */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 426px;
+    height: 414px;
+    margin: 20px 0;
+    border: 1px solid #333; /* Outer border of the board */
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Each square of the board */
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 2px solid #333; /* Grid lines between squares */
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Hover effect for squares */
+.square:hover {
+    background-color: #ddd;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Winner and Rematch styling */
+h2 {
+    color: #28a745; /* Green color for the winner */
+}
+
+h3 {
+    color: #888;
+}
+
+/* Rematch button styling */
+.rematch-button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+.rematch-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .board {
+    width: 300px;
+    height: 300px;
+    }
+
+    .square {
+    font-size: 2.5rem;
+    }
+}

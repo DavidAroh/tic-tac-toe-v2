@@ -1,38 +1,62 @@
-.App {
+.game {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.board-row {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.square {
+  width: 142px;  /* Increased box size */
+  height: 138px; /* Increased box size */
+  font-size: 3rem; /* Increased font size for better visibility */
+  font-weight: bold; /* Make the X and O bolder */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #333;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.square:hover {
+  background-color: #e0e0e0;
+}
+
+.start-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+}
+
+.start-screen input {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.start-screen button {
+  margin: 10px;
+  padding: 15px 25px;
+  font-size: 1rem;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.start-screen button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
